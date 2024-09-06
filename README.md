@@ -1,4 +1,35 @@
-# desert-ecommerce
+# Dessert menu with cart assignment
+
+## Overview
+Desserts Ecommerce WebApp , Which is an awesome web application, that build to help you order your favorite sweets easily and fastly.
+
+### The challenge
+
+Users should be able to all those features now:
+
+- Add items to the cart and remove them
+- Increase/decrease the number of items in the cart
+- See an order confirmation modal when they click "Confirm Order"
+- Reset their selections when they click "Start New Order"
+- View the optimal layout for the interface depending on their device's screen size
+- See hover and focus states for all interactive elements on the page
+
+### Screenshot
+
+We don't need screenshots because will see the full real app on link https://desserts-store-test.netlify.app 
+
+## My process
+
+### Built with
+
+- Semantic HTML5 markup
+- CSS custom properties
+- CSS Grid
+- Mobile-first workflow
+- [Sass](https://sass-lang.com/) - CSS with superpowers
+- [Vue.js](https://vuejs.org/) - JS library
+- [Nuxt.js](https://nuxt.com/) - Vue framework
+- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/) - For styles
 
 ## Build Setup
 
