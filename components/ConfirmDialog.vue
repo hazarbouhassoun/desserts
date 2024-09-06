@@ -24,7 +24,7 @@
                                             ${item.image.tablet} 800w,
                                             ${item.image.desktop} 1440w
                                         `"
-                                        sizes="(max-width: 375px) 375px, (max-width: 800) 800px, 100vw"
+                                        sizes="(max-width: 375px) 375px, (max-width: 800px) 800px, 1440px"
                                         class="p-0 img-border d-block object-fit-cover rounded-3"
                                         :alt="item.name"
                                         height="70"

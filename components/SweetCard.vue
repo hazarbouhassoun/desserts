@@ -8,7 +8,7 @@
               ${sweet.image.tablet} 800w,
               ${sweet.image.desktop} 1440w
             `"
-            sizes="(max-width: 375px) 375px, (max-width: 800) 800px, 100vw"
+            sizes="(max-width: 375px) 375px, (max-width: 800px) 800px, 1440px"
             :class="'d-block mx-auto mb-2 object-fit-cover rounded-4 img-class ' + (sweet.flag ? 'border-red border-3' : '')" 
             :alt="sweet.name"
             height="260"
