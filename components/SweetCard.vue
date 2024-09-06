@@ -1,18 +1,18 @@
 <template>
     <div class="mb-4">
       <!-- Card Img -->
-            <img 
-              :src="sweet.image.thumbnail" 
-              :srcset="`
-                ${sweet.image.mobile} 480w,
-                ${sweet.image.tablet} 768w,
-                ${sweet.image.desktop} 1024w
-              `" 
-              sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 1024px"
-              :class="'d-block mx-auto mb-2 object-fit-cover rounded-4 img-class ' + (sweet.flag ? 'border-red border-3' : '') " 
-              :alt="sweet.name"
-              height="260"
-            >
+            <img
+            :src="sweet.image.thumbnail" 
+            :srcset="`
+              ${sweet.image.mobile} 375w,
+              ${sweet.image.tablet} 800w,
+              ${sweet.image.desktop} 1440w
+            `"
+            sizes="(max-width: 375px) 375px, (max-width: 800) 800px, 100vw"
+            :class="'d-block mx-auto mb-2 object-fit-cover rounded-4 img-class ' + (sweet.flag ? 'border-red border-3' : '')" 
+            :alt="sweet.name"
+            height="260"
+          />
             <div class="text-center">
               <!-- Card Button -->
                 <button @click="toggleFlag()" :class="'btn float-btn ' + (!sweet.flag ? 'btn-add-to-cart' : 'btn-add-to-cart-active') ">
@@ -69,7 +69,7 @@ function updateCount (type) {
     min-width: 75%;
 }
 .img-class{
-   width: stretch;  /* For WebKit browsers (Chrome, Safari) */    
+   width: 100%; 
 }
 .btn:hover {
   color:  map-get($colors, "red") !important;

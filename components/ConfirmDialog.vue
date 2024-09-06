@@ -20,14 +20,13 @@
                                     <img 
                                         :src="item.image.thumbnail" 
                                         :srcset="`
-                                        ${item.image.mobile} 480w,
-                                        ${item.image.tablet} 768w,
-                                        ${item.image.desktop} 1024w
-                                        `" 
-                                        sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 1024px" 
+                                            ${item.image.mobile} 375w,
+                                            ${item.image.tablet} 800w,
+                                            ${item.image.desktop} 1440w
+                                        `"
+                                        sizes="(max-width: 375px) 375px, (max-width: 800) 800px, 100vw"
                                         class="p-0 img-border d-block object-fit-cover rounded-3"
-                                        :alt="item.name" 
-                                        width="70" 
+                                        :alt="item.name"
                                         height="70"
                                     >
                                     <div class="px-2">

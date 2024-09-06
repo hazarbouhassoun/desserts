@@ -22,7 +22,7 @@
                 <hr class="mb-0"/>
             </div>
             <!-- Order total -->
-            <div class="row justify-content-between">
+            <div class="row justify-content-between mt-3">
                 <p class="w-auto font-semiBold">Order Total</p>
                 <h3 class="font-bold w-auto">${{orderTotal.toFixed(2)}}</h3>
             </div>

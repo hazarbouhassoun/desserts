@@ -36,17 +36,16 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
+  modules: [],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-    loaders: {
-      scss: {
-        implementation: require('sass'),
-      },
-    },
-  },
+  // build: {
+  //   loaders: {
+  //     scss: {
+  //       implementation: require('sass'),
+  //     },
+  //   },
+  // },
   vite: {
     css: {
       preprocessorOptions: {
