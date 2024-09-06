@@ -1,0 +1,24 @@
+{
+  "name": "desert-ecommerce",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "core-js": "^3.25.3",
+    "nuxt": "^3.12.2",
+    "sass": "^1.77.6",
+    "sass-loader": "^14.2.1",
+    "vue": "^3.4.29"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.17.4",
+    "@nuxt/typescript-build": "^3.0.2",
+    "typescript": "^5.5.2"
+  }
+}

@@ -1,0 +1,29 @@
+@each $key, $val in $colors {
+    .text-#{$key} {
+        color: $val !important;
+    }
+    .border-#{$key} {
+        border: solid 1px;
+        border-color: $val !important;
+    }
+    .bg-#{$key} {
+        background-color: $val !important;
+    }
+}
+@each $key, $val in $fonts {
+    .font-size-#{$key} {
+        font-size: $val !important;
+    }
+}
+@each $name, $type, $weight in $family{
+    .font-#{$name} {
+        font-family: $type !important;
+        font-weight: $weight !important;
+        white-space: pre-line;
+    }  
+}
+// Function to get color by name
+@function color($color-name) {
+    @return map-get($colors, $color-name);
+}
+  
