@@ -3,14 +3,14 @@
         <h3 class="px-3 mb-2 mt-3 font-bold text-red">Your Cart ({{totalItems}})</h3>
         <div v-if="flaggedItems && flaggedItems.length" class="p-3">
             <!-- Selected Items -->
-            <div v-for="(item, index) in flaggedItems" class="selected-item position-relative pt-2">
+            <div v-for="item in flaggedItems" class="selected-item position-relative pt-2">
                 <h6 class="font-semiBold">{{item.name}}</h6>
                 <div>
                     <span class="text-red font-semiBold">{{item.count}}x</span>
                     <span class="text-Rose300 font-semiBold mx-2">@ ${{item.price.toFixed(2)}}</span>
                     <span class="text-Rose500 font-semiBold">${{(item.price*item.count).toFixed(2)}}</span>
                 </div>
-                <button type="button" class="position-absolute top-0 start-100 remove-item p-1 border-Rose300 border-2 rounded-5" @click="removeItem(index)">
+                <button type="button" class="position-absolute top-0 start-100 remove-item p-1 border-Rose300 border-2 rounded-5" @click="removeItem(item.id)">
                     <img 
                         src="public/images/icon-remove-item.svg" 
                         class="d-block mx-auto" 
@@ -59,9 +59,9 @@ const totalItems = computed(() => props.flaggedItems?.reduce((sum, item) => sum 
 // Compute order total
 const orderTotal = computed(() => props.flaggedItems?.reduce((total, item) => total + item.count * item.price, 0));
 
-// tell parent to remove an item by index
-function removeItem(index) {
-    emit('removeItem', index)
+// tell parent to remove an item by id
+function removeItem(id) {
+    emit('removeItem', id)
 }
 // tell parent to confirm order
 function confirmOrder() {

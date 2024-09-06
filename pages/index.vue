@@ -21,7 +21,7 @@
               </div>
               <!-- User Store Card -->
               <div class="col-xl-4 col-lg-5 col-md-12 col-sm-12">
-                  <MyCard :flaggedItems="flaggedItems" @removeItem="updateSweetsFlag($event)" @confirmOrder="openConfirmDialog()"/>
+                  <MyCard :flaggedItems="flaggedItems" @removeItem="removeSelectedSweets($event)" @confirmOrder="openConfirmDialog()"/>
               </div>
           </div>
           <!-- Modal -->
@@ -42,9 +42,18 @@ const flaggedItems = computed(() => {
   return items.value?.filter(item => item.flag === true);
 });
 
-// changing item's flag value to make it selected or not
+// changing item's flag value to make it selected
 function updateSweetsFlag(index) {
-    items.value[index].flag = !items.value[index].flag
+    items.value[index].flag = true
+}
+// changing item's flag value and reset it's count to make it not selected
+function removeSelectedSweets(id) {
+    items.value?.filter(item => {
+      if(item.id === id) {
+        item.flag = false,
+        item.count = 1
+      }
+    })
 }
 
 // increment, decrement item's count value
@@ -85,7 +94,8 @@ const fetchData = async () => {
     const response = await fetch('/data.json');  // Native fetch API
     if (!response.ok) throw new Error('Failed to fetch data');
     data.value = await response.json();
-    data.value?.forEach(item => {
+    data.value?.forEach((item, index) => {
+        item.id = index + 1; // assign id to tell me data number from the selected item
         item.flag = false; // assign flag to tell me if the item selected
         item.count = 1; // assign count to tell me data number from the selected item
         item.image.thumbnail = item.image.thumbnail.replace('./assets',''); // remove ./assets because images now in public folder
